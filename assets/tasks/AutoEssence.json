@@ -7,7 +7,7 @@
             "description": "$task.AutoEssence.description",
             "option": [
                 "AutoEssenceDoOverride",
-                "AutoEssenceSkipGetAward",
+                "AutoEssenceGetAward",
                 "AutoEssenceRepeatCount"
             ]
         }
@@ -43,7 +43,7 @@
                 }
             ]
         },
-        "AutoEssenceSkipGetAward": {
+        "AutoEssenceGetAward": {
             "type": "switch",
             "label": "$option.AutoEssenceGetAward.label",
             "description": "$option.AutoEssenceGetAward.description",
@@ -53,7 +53,7 @@
                     "name": "Yes",
                     "pipeline_override": {
                         "AutoEssenceSkipGetAward": {
-                            "enabled": true
+                            "enabled": false
                         }
                     }
                 },
@@ -61,7 +61,7 @@
                     "name": "No",
                     "pipeline_override": {
                         "AutoEssenceSkipGetAward": {
-                            "enabled": false
+                            "enabled": true
                         }
                     }
                 }
