@@ -9,6 +9,9 @@
                 "AutoEssenceDoOverride",
                 "AutoEssenceGetAward",
                 "AutoEssenceRepeatCount"
+            ],
+            "controller": [
+                "Win32-Front"
             ]
         }
     ],
