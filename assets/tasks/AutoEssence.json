@@ -52,7 +52,7 @@
                 {
                     "name": "Yes",
                     "pipeline_override": {
-                        "AutoEssenceSkipGetAward": {
+                        "AutoEssenceSkipGetAwardEntry": {
                             "enabled": false
                         }
                     }
@@ -60,7 +60,7 @@
                 {
                     "name": "No",
                     "pipeline_override": {
-                        "AutoEssenceSkipGetAward": {
+                        "AutoEssenceSkipGetAwardEntry": {
                             "enabled": true
                         }
                     }
