@@ -9,6 +9,7 @@
                     "name": "AutoEssence",
                     "option": {
                         "AutoEssenceDoOverride": "Yes",
+                        "AutoEssenceGetAward": "Yes",
                         "AutoEssenceRepeatCount": {
                             "AutoEssenceRepeatCountValue": "5"
                         }

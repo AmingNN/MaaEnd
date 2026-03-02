@@ -1,7 +1,8 @@
 {
     "AutoEssenceMain": {
         "anchor": {
-            "AutoEssenceAfterMoveToTriggerPoint": "AutoEssenceClickTriggerButtonPre"
+            // "AutoEssenceAfterMoveToTriggerPoint": "AutoEssenceClickTriggerButtonPre"
+            "AutoEssenceAfterMoveToTriggerPoint": "AutoEssenceCheckGetAward"
         },
         "focus": {
             "Node.Action.Starting": "🔍正在寻找附近的淤积点"
@@ -17,6 +18,12 @@
         ],
         "rate_limit": 1000
     },
+    "AutoEssenceCheckGetAward": {
+        "next": [
+            "AutoEssenceSkipGetAward",
+            "AutoEssenceClickTriggerButtonPre"
+        ]
+    },
     "AutoEssenceAltKeyUp": {
         "action": {
             "param": {
@@ -27,6 +34,30 @@
         "next": [
             "[Anchor]AutoEssenceAfterAltKeyUp"
         ]
+    },
+    "AutoEssenceSkipGetAward": {
+        "enabled": true,
+        "action": {
+            "type": "Click"
+        },
+        "focus": {
+            "Node.Action.Starting": "👆跳过领取，直接返回"
+        },
+        "next": [
+            "AutoEssenceOnSuccess"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    560,
+                    360,
+                    520,
+                    340
+                ],
+                "expected": "放弃奖励并重置"
+            },
+            "type": "OCR"
+        }
     },
     "AutoEssenceClickTriggerButtonPre": {
         "action": {

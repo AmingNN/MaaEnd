@@ -72,6 +72,8 @@
     "task.AutoEssence.description": "Automatically challenge heavily accumulated points.\n## WARNING:\n- Please make sure to enable the **Global Hotkey** option in **[Settings] - [Hotkey]**, and remember the **End Task** key. When the program fails, long-press this key to stop.\n- Please make sure to start the task **near the accumulation point to be farmed** or at the **accumulation point start page**.\n## TIPS:\n- This task only relies on turrets for output. Please **place as many turrets as possible** at the accumulation point, but do not place them too close to the trigger point.\n- This task does not involve automatic combat. Please switch the foreground character to **one with strong survivability** and configure sufficient **health recovery items**.\n---",
     "option.AutoEssenceDoOverride.label": "Use Inscription Vouchers",
     "option.AutoEssenceDoOverride.description": "If inscription is needed, please select the attribute to be inscribed on the accumulation point start interface in advance, and ensure sufficient inscription vouchers (if not enough, non-inscription collection will be performed).",
+    "option.AutoEssenceGetAward.label": "Claim Rewards",
+    "option.AutoEssenceGetAward.description": "Whether to automatically claim the rewards after each challenge; when disabled, claiming will be skipped.",
     "option.AutoEssenceRepeatCount.label": "Loop Farming",
     "option.AutoEssenceRepeatCount.description": "If loop farming is needed, please ensure sufficient stamina (if not enough, the task will end early).",
     "option.AutoEssenceRepeatCount.inputs.AutoEssenceRepeatCountValue.label": "Max Times",
