@@ -1,0 +1,84 @@
+{
+    "AutoEssenceSkipGetAwardEntry": {
+        "enabled": true,
+        "focus": {
+            "Node.Action.Starting": "🔀 入口：跳过领取流程"
+        },
+        "next": [
+            "AutoEssenceSkip_KeyDown"
+        ]
+    },
+
+    "AutoEssenceSkip_KeyDown": {
+        "action": {
+            "param": {
+                "key": 18
+            },
+            "type": "KeyDown"
+        },
+        "next": [
+            "AutoEssenceSkip_Click"
+        ],
+        "timeout": 1000
+    },
+
+    "AutoEssenceSkip_Click": {
+        "enabled": true,
+        "action": {
+            "type": "Click"
+        },
+        "focus": {
+            "Node.Action.Starting": "👆跳过领取，直接返回"
+        },
+        "next": [
+            "AutoEssenceSkip_KeyUp"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    560,
+                    360,
+                    520,
+                    340
+                ],
+                "expected": "放弃奖励并重置"
+            },
+            "type": "OCR"
+        }
+    },
+
+    "AutoEssenceSkip_KeyUp": {
+        "action": {
+            "param": {
+                "key": 18
+            },
+            "type": "KeyUp"
+        },
+        "next": [
+            "AutoEssenceSkipGetAwardConfirm"
+        ]
+    },
+    "AutoEssenceSkipGetAwardConfirm": {
+        "action": {
+            "type": "Click"
+        },
+        "focus": {
+            "Node.Action.Starting": "👆点击确认放弃奖励按钮"
+        },
+        "recognition": {
+            "param": {
+                "roi": [
+                    597,
+                    345,
+                    317,
+                    196
+                ],
+                "template": "Common/Button/YellowConfirmButtonType1.png"
+            },
+            "type": "TemplateMatch"
+        },
+        "next": [
+            "AutoEssenceOnSuccess"
+        ]
+    }
+}
